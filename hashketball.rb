@@ -201,4 +201,16 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+   game_hash.each do |location, team|
+    team.each do |key, value|
+      if key == :players
+        value.each do |player, stats|
+          if stats[:shoe] == 16
+            binding.pry
+            return player
+          end
+        end
+      end
+    end
+  end
 end
