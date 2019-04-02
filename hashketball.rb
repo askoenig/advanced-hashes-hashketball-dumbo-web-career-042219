@@ -206,7 +206,7 @@ def big_shoe_rebounds
       if key == :players
         value.each do |player, stats|
           if stats[:shoe] == 19
-            return player[:stats][:rebounds]
+            return stats[:rebounds]
           end
         end
       end
